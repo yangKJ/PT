@@ -1,0 +1,42 @@
+#!/usr/bin/env ruby
+
+# 获取文件权限
+$current_dir = File.dirname(File.expand_path(__FILE__))
+Dir[File.join($current_dir, "setup/*.rb")].each do |file|
+  require_relative(file)
+end
+
+# README替换
+FileUtils.mv "POD_README.md", "README.md"
+
+# 获取参数
+size = ARGV.size
+pod_name = ""
+pod_languge = ""
+if size == 0
+    puts 'Running Error!!!please input correct project name and develop languge'.red
+    puts ''
+elsif size == 1
+    pod_name = ARGV[0]
+    pod_languge = "ObjC"
+    File.rename('../' + File.basename(Dir.getwd), '../' + pod_name)
+    puts "项目名称:#{pod_name}".green
+    puts "项目语言:#{pod_languge} [ Default ]".green
+    puts ''
+elsif size >= 2
+    pod_name = ARGV[0]
+    pod_languge = ARGV[1]
+    if pod_languge.downcase == 'objc'
+       pod_languge = "ObjC" 
+    elsif pod_languge.downcase == 'swift'
+       pod_languge = "Swift"  
+    end
+    File.rename('../' + File.basename(Dir.getwd), '../' + pod_name)
+    puts "项目名称:#{pod_name}".green
+    puts "项目语言:#{pod_languge}".green
+    puts ''
+end
+
+# 模板配置器初始化
+Pod::TemplateConfigurator.new(pod_name, pod_languge).run
+
