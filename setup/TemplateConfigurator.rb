@@ -95,8 +95,8 @@ module Pod
         #重新Git初始化
         def reinitialize_git_repo
             `rm -rf .git`
-            `git init`
-            `git add -A`
+            #`git init`
+            #`git add -A`
         end
         
         #验证用户信息
