@@ -1,8 +1,8 @@
 //
 //  Util.swift
-//  PROJECT
+//  WhaleFull
 //
-//  Created by Condy on TODAYS_DATE.
+//  Created by Condy on 2021/12/30.
 //
 
 import UIKit
