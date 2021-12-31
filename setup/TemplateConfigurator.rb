@@ -19,13 +19,7 @@ module Pod
         def run
             @message_bank.welcome_message
             
-            case pod_languge.downcase.to_sym
-                when :swift
-                ConfigureSwift.perform(configurator: self)
-                when :objc
-                ConfigureOC.perform(configurator: self)
-            end
-            
+            generate_languge_project
             replace_variables_in_files
             clean_template_files
             customise_prefix
@@ -37,6 +31,16 @@ module Pod
         end
         
         #-------------------定义对象方法---------------------#
+        
+        #生成指定语言项目
+        def generate_languge_project
+            case pod_languge.downcase.to_sym
+                when :swift
+                ConfigureSwift.perform(configurator: self)
+                when :objc
+                ConfigureOC.perform(configurator: self)
+            end
+        end
         
         #运行pod install
         def run_pod_install
@@ -55,9 +59,9 @@ module Pod
             end
         end
         
-        # 替换文件中的变量内容
+        #替换文件中的变量内容
         def replace_variables_in_files
-            file_names = ['LICENSE', 'README.md', 'NAME.podspec', 'NAME-oc.podspec', podfile_path]
+            file_names = ['LICENSE', 'README.md', 'NAME.podspec', 'NAMEOC.podspec', 'Example/Podfile']
             file_names.each do |file_name|
                 text = File.read(file_name)
                 text.gsub!("${POD_NAME}", @pod_name)
@@ -80,14 +84,14 @@ module Pod
             File.open(prefix_path, "w") { |file| file.puts pch }
         end
         
-        #spec文件重命名
+        #podspec文件重命名
         def rename_spec_files
             case pod_languge.downcase.to_sym
                 when :swift
                 File.rename("NAME.podspec", @pod_name + ".podspec")
-                `rm -rf NAME-oc.podspec`
+                `rm -rf NAMEOC.podspec`
                 when :objc
-                File.rename("NAME-oc.podspec", @pod_name + ".podspec")
+                File.rename("NAMEOC.podspec", @pod_name + ".podspec")
                 `rm -rf NAME.podspec`
             end
         end
@@ -97,11 +101,6 @@ module Pod
             `rm -rf .git`
             #`git init`
             #`git add -A`
-        end
-        
-        #验证用户信息
-        def validate_user_details
-            return (user_email.length > 0) && (user_name.length > 0)
         end
         
         #-------------------定义对象变量---------------------#
@@ -126,10 +125,6 @@ module Pod
         
         def date
             Time.now.strftime "%Y/%m/%d"
-        end
-        
-        def podfile_path
-            'Example/Podfile'
         end
         
     end
