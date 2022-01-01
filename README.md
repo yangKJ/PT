@@ -1,8 +1,12 @@
-# Pod - Template
+# PT
 
 <font color=red>**👌. Automatically generate componentized modules**</font>
 
 - 自动生成组件化模块
+
+```
+Pod lib create Demo swift --template-url='git@github.com:yangKJ/PT'
+```
 
 -----
 
@@ -43,11 +47,3 @@
 ### LICENSE
 
 LICENSE is available under the [MIT](LICENSE) license. See the [LICENSE](LICENSE) file for more info.
-
-> <font color=red>**觉得有帮助的老哥们，请帮忙点个星 ⭐..**</font>
-
-**救救孩子吧，谢谢各位老板。**
-
-🥺
-
------
