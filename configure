@@ -20,9 +20,8 @@ elsif size == 1
     pod_name = ARGV[0]
     pod_languge = "ObjC"
     File.rename('../' + File.basename(Dir.getwd), '../' + pod_name)
-    puts "项目名称:#{pod_name}".green
-    puts "项目语言:#{pod_languge} [ Default ]".green
-    puts ''
+    puts "Project:#{pod_name}".green
+    puts "Language:#{pod_languge} [ Default ]".green
 elsif size >= 2
     pod_name = ARGV[0]
     pod_languge = ARGV[1]
@@ -32,9 +31,8 @@ elsif size >= 2
        pod_languge = "Swift"  
     end
     File.rename('../' + File.basename(Dir.getwd), '../' + pod_name)
-    puts "项目名称:#{pod_name}".green
-    puts "项目语言:#{pod_languge}".green
-    puts ''
+    puts "Project:#{pod_name}".green
+    puts "Language:#{pod_languge}".green
 end
 
 # 模板配置器初始化
