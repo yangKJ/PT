@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
   s.requires_arc     = true
   s.static_framework = true
 
-  s.dependency 'WhaleFull/Resources'
+#  s.dependency 'WhaleFull/Resources'
 #  s.dependency 'WhaleFull/CTMediator'
 
   s.subspec 'Resources' do |xx|
@@ -36,6 +36,10 @@ Pod::Spec.new do |s|
   
   s.subspec 'Util' do |xx|
     xx.source_files = 'Sources/Util/*.swift'
+  end
+
+  s.subspec 'Api' do |xx|
+    xx.source_files = 'Sources/Api/*.swift'
   end
   
   s.subspec 'Controller' do |xx|

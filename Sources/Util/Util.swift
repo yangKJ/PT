@@ -5,9 +5,9 @@
 //  Created by Condy on 2021/12/30.
 //
 
-import UIKit
-import WhaleFull
-
+import Foundation
+//import WhaleFull
+//
 //struct Util {
 //
 //    internal static let moduleName = "PROJECT"

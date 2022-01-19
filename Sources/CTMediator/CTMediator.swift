@@ -5,9 +5,9 @@
 //  Created by Condy on 2021/12/30.
 //
 
-import UIKit
-import WhaleFull
-
+import Foundation
+//import WhaleFull
+//
 //public extension CTMediator {
 //    /// Swift调度者
 //    /// 备注提示，这里必须加上`@objc`
