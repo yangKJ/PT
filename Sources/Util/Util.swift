@@ -1,25 +1,25 @@
 //
-//  Util.swift
-//  WhaleFull
+//  PROJECTUtil.swift
+//  PROJECT
 //
-//  Created by Condy on 2021/12/30.
+//  Created by PROJECT_OWNER on TODAYS_DATE.
 //
 
 import Foundation
-//import WhaleFull
-//
-//struct Util {
-//
-//    internal static let moduleName = "PROJECT"
-//}
-//
-//extension R {
-//
-//    internal static func image(_ named: String) -> UIImage {
-//        self.image(named, forResource: Util.moduleName)
-//    }
-//
-//    internal static func text(_ string: String) -> String {
-//        self.text(string, forResource: Util.moduleName)
-//    }
-//}
+import Rickenbacker
+
+struct PROJECTUtil {
+
+    internal static let moduleName = "PROJECT"
+}
+
+extension Rickenbacker.R {
+
+    internal static func image(_ named: String) -> UIImage {
+        self.image(named, forResource: PROJECTUtil.moduleName)
+    }
+
+    internal static func text(_ string: String) -> String {
+        self.text(string, forResource: PROJECTUtil.moduleName)
+    }
+}
