@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = '${POD_NAME}'
-  s.version          = '0.0.1'
+  s.version          = '1.0.0'
   s.summary          = 'A short description of ${POD_NAME}.'
   
   # This description is used to generate tags and improve search results.
@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   
   s.homepage         = 'https://github.com/${USER_NAME}/${POD_NAME}'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Condy' => 'ykj310@126.com' }
+  s.author           = { 'Condy' => 'yangkj310@gmail.com' }
   s.source           = { :git => 'https://github.com/${USER_NAME}/${POD_NAME}.git', :tag => s.version.to_s }
   
   s.ios.deployment_target = '10.0'
@@ -27,13 +27,37 @@ Pod::Spec.new do |s|
   s.requires_arc     = true
   s.static_framework = true
   
-  #s.dependency 'RxNetworks' # 网络架构
   s.dependency 'Rickenbacker' # 响应式基础架构
+  #s.dependency 'RxNetworks' # 网络架构
+  #s.dependency 'SnapKit' # 布局架构
+  #s.dependency 'Wintersweet' # 图像框架，支持GIF和Image
   
   s.subspec 'Resources' do |xx|
     xx.resource_bundles = { '${POD_NAME}' => ['Sources/Resources/*.{xcassets,lproj}'] }
   end
   
-  s.source_files = '${POD_NAME}/Classes/**/*.swift'
+  s.subspec 'Util' do |xx|
+    xx.source_files = 'Sources/Util/*.swift'
+  end
+
+  s.subspec 'Api' do |xx|
+    xx.source_files = 'Sources/Api/*.swift'
+  end
+  
+  s.subspec 'Controller' do |xx|
+    xx.source_files = 'Sources/Controller/*.swift'
+  end
+  
+  s.subspec 'ViewModel' do |xx|
+    xx.source_files = 'Sources/ViewModel/*.swift'
+  end
+  
+  s.subspec 'View' do |xx|
+    xx.source_files = 'Sources/View/*.swift'
+  end
+  
+  s.subspec 'Model' do |xx|
+    xx.source_files = 'Sources/Model/*.swift'
+  end
   
 end
