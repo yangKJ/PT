@@ -2,7 +2,7 @@
 //  ${POD_NAME}Target.swift
 //  ${POD_NAME}
 //
-//  Created by PROJECT_OWNER on TODAYS_DATE.
+//  Created by ${PROJECT_OWNER} on ${TODAYS_DATE}.
 //  See: https://github.com/yangKJ/Rickenbacker/blob/master/Rickenbacker/Modules/Mediator/Mediator/SecondTarget.swift
 
 import Foundation

@@ -27,7 +27,8 @@ Pod::Spec.new do |s|
   s.requires_arc     = true
   s.static_framework = true
   
-  s.dependency 'Rickenbacker' # 响应式基础架构
+  s.dependency 'Rickenbacker/Adapter' # 响应式基础架构
+  s.dependency 'Rickenbacker/Mediator' # 组件化模块
   #s.dependency 'RxNetworks' # 网络架构
   #s.dependency 'SnapKit' # 布局架构
   #s.dependency 'Wintersweet' # 图像框架，支持GIF和Image
@@ -39,7 +40,7 @@ Pod::Spec.new do |s|
   s.subspec 'Util' do |xx|
     xx.source_files = 'Sources/Util/*.swift'
   end
-
+  
   s.subspec 'Api' do |xx|
     xx.source_files = 'Sources/Api/*.swift'
   end

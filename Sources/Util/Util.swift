@@ -2,7 +2,7 @@
 //  ${POD_NAME}Util.swift
 //  ${POD_NAME}
 //
-//  Created by PROJECT_OWNER on TODAYS_DATE.
+//  Created by ${PROJECT_OWNER} on ${TODAYS_DATE}.
 //  https://github.com/yangKJ/Rickenbacker
 
 import Foundation
