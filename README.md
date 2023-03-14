@@ -27,7 +27,7 @@ Pod lib create Demo swift --template-url='git@github.com:yangKJ/PT'
 
 > 关于该模块架构更多信息，请查看文档.🎷
 > 
-> [WhaleFullDemo](https://github.com/yangKJ/WhaleFull)
+> [RickenbackerDemo](https://github.com/yangKJ/Rickenbacker)
 > 
 > If you find it helpful, please help me with a star. If you have any questions or needs, you can also issue.
 >
@@ -36,7 +36,7 @@ Pod lib create Demo swift --template-url='git@github.com:yangKJ/PT'
 ### Contents
 - 自动生成组件化模块目录结构如下，该区域删除或者增加模块
 
-<img src="screenshots/template.png" width="800" align="center" />
+<img src="https://raw.githubusercontent.com/yangKJ/PT/master/screenshots/template.png" width=90% align="center" />
 
 ### About the author
 - 🎷 **E-mail address: [yangkj310@gmail.com](yangkj310@gmail.com) 🎷**
