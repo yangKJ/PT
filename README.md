@@ -15,19 +15,17 @@ Pod lib create Demo swift --template-url='git@github.com:yangKJ/PT'
 - 自动快捷创建Swift组件模块，终端执行如下命令
 
 #### pod lib create Demo swift --template-url="https://github.com/yangKJ/PT"
-- 将上述`Demo`换成对应工程名即可 ⚠️
+- 将上述 `Demo` 换成对应工程名即可 ⚠️
 
 亦或者执行此命令也可 👒👒
 
 - pod lib create Demo swift --template-url='git@github.com:yangKJ/PT'
 
-<img src="https://raw.githubusercontent.com/yangKJ/PT/master/screenshots/flow.png" width=66% hspace="15px">
-
-----
+<img src="https://raw.githubusercontent.com/yangKJ/PT/master/screenshots/flow.png" width=90% hspace="5px">
 
 - <font color=red>**Tip: 该模块会引入默认MVVM + RxSwift响应式架构模块**</font>
 
-> 关于该模块架构更多信息，请查看文档.🎷
+> 关于该模块架构更多信息，请查看文档
 > 
 > [RickenbackerDemo](https://github.com/yangKJ/Rickenbacker)
 > 
@@ -36,7 +34,7 @@ Pod lib create Demo swift --template-url='git@github.com:yangKJ/PT'
 > Thanks.🎇
 
 ### Contents
-<img src="https://raw.githubusercontent.com/yangKJ/PT/master/screenshots/template.png" width=90% hspace="15px">
+<img src="https://raw.githubusercontent.com/yangKJ/PT/master/screenshots/template.png" width=90% hspace="5px">
 
 - 自动生成组件化模块目录结构如下，该区域删除或者增加模块，在`podspec`增加or删除模块即可；
 - The automatically generated component module directory structure is as follows. 
