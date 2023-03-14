@@ -2,7 +2,7 @@
 //  ${POD_NAME}ViewController.swift
 //  ${POD_NAME}
 //
-//  Created by ${PROJECT_OWNER} on ${TODAYS_DATE}.
+//  Created by ${USER_NAME} on ${DATE}.
 //  https://github.com/yangKJ/Rickenbacker
 
 import Foundation
@@ -16,4 +16,3 @@ class ${POD_NAME}ViewController: BaseViewController {
         
     }
 }
-

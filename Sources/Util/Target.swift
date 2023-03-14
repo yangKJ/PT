@@ -2,8 +2,8 @@
 //  ${POD_NAME}Target.swift
 //  ${POD_NAME}
 //
-//  Created by ${PROJECT_OWNER} on ${TODAYS_DATE}.
-//  See: https://github.com/yangKJ/Rickenbacker/blob/master/Rickenbacker/Modules/Mediator/Mediator/SecondTarget.swift
+//  Created by ${USER_NAME} on ${DATE}.
+//  https://github.com/yangKJ/Rickenbacker
 
 import Foundation
 
