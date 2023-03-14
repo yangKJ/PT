@@ -77,7 +77,7 @@ module Pod
         
         #替换Sources资源当中的变量内容
         def replace_variables_in_sources_files
-            file_names = ['Sources/Util/Target.swift', 'Sources/Util/Util.swift']
+            file_names = ['Sources/Util/Target.swift', 'Sources/Util/Util.swift', 'Sources/ViewModel/ViewModel.swift', 'Sources/ViewController/ViewController.swift']
             file_names.each do |file_name|
                 text = File.read(file_name)
                 text.gsub!("${POD_NAME}", @pod_name)
