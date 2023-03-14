@@ -22,6 +22,7 @@ module Pod
             generate_languge_project
             replace_variables_in_files
             replace_variables_in_sources_files
+            rename_sources_files
             clean_template_files
             customise_prefix
             rename_spec_files
@@ -88,6 +89,14 @@ module Pod
                 text.gsub!("${DATE}", date)
                 File.open(file_name, "w") { |file| file.puts text }
             end
+        end
+        
+        #重命名Sources资源当中的文件名
+        def rename_sources_files
+            File.rename("Sources/Util/Target.swift", "Sources/Util/" + @pod_name + "Target.swift")
+            File.rename("Sources/Util/Util.swift", "Sources/Util/" + @pod_name + "Util.swift")
+            File.rename("Sources/ViewModel/ViewModel.swift", "Sources/ViewModel/" + @pod_name + "ViewModel.swift")
+            File.rename("Sources/Controller/ViewController.swift", "Sources/Controller/" + @pod_name + "ViewController.swift")
         end
         
         #自定义前缀
