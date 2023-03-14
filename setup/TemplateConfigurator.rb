@@ -21,6 +21,7 @@ module Pod
             
             generate_languge_project
             replace_variables_in_files
+            replace_variables_in_sources_files
             clean_template_files
             customise_prefix
             rename_spec_files
@@ -62,6 +63,21 @@ module Pod
         #替换文件中的变量内容
         def replace_variables_in_files
             file_names = ['LICENSE', 'README.md', 'NAME.podspec', 'NAMEOC.podspec', 'Example/Podfile']
+            file_names.each do |file_name|
+                text = File.read(file_name)
+                text.gsub!("${POD_NAME}", @pod_name)
+                text.gsub!("${REPO_NAME}", @pod_name.gsub('+', '-'))
+                text.gsub!("${USER_NAME}", user_name)
+                text.gsub!("${USER_EMAIL}", user_email)
+                text.gsub!("${YEAR}", year)
+                text.gsub!("${DATE}", date)
+                File.open(file_name, "w") { |file| file.puts text }
+            end
+        end
+        
+        #替换Sources资源当中的变量内容
+        def replace_variables_in_sources_files
+            file_names = ['Sources/Util/Target.swift', 'Sources/Util/Util.swift']
             file_names.each do |file_name|
                 text = File.read(file_name)
                 text.gsub!("${POD_NAME}", @pod_name)
