@@ -38,27 +38,27 @@ Pod::Spec.new do |s|
   end
   
   s.subspec 'Util' do |xx|
-    xx.source_files = 'Sources/Util/*.swift'
+    xx.source_files = 'Sources/Util/**/*.swift'
   end
   
   s.subspec 'Api' do |xx|
-    xx.source_files = 'Sources/Api/*.swift'
+    xx.source_files = 'Sources/Api/**/*.swift'
   end
   
   s.subspec 'Controller' do |xx|
-    xx.source_files = 'Sources/Controller/*.swift'
+    xx.source_files = 'Sources/Controller/**/*.swift'
   end
   
   s.subspec 'ViewModel' do |xx|
-    xx.source_files = 'Sources/ViewModel/*.swift'
+    xx.source_files = 'Sources/ViewModel/**/*.swift'
   end
   
   s.subspec 'View' do |xx|
-    xx.source_files = 'Sources/View/*.swift'
+    xx.source_files = 'Sources/View/**/*.swift'
   end
   
   s.subspec 'Model' do |xx|
-    xx.source_files = 'Sources/Model/*.swift'
+    xx.source_files = 'Sources/Model/**/*.swift'
   end
   
 end
