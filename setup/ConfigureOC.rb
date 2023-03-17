@@ -27,7 +27,7 @@ module Pod
       # There has to be a single file in the Classes dir
       # or a framework won't be created, which is now default
       
-      `touch Sources/Classes/ReplaceMe.m`
+      #`touch Sources/Classes/ReplaceMe.m`
 
       `mv ./templates/ios/Example/* ./`
 

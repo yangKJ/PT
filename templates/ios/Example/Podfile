@@ -7,12 +7,7 @@ platform :ios, '10.0' # 这个版本为所有CocoaPods里面`s.ios.deployment_ta
 inhibit_all_warnings!
 use_frameworks!
 
-target '${POD_NAME}_Example' do
+target '${POD_NAME}' do
   pod '${POD_NAME}', :path => '..'
-
-end
-
-target '${POD_NAME}_Tests' do
-  inherit! :search_paths
-
+  
 end

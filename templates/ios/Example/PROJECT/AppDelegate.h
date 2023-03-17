@@ -1,5 +1,5 @@
 //
-//  CPDAppDelegate.h
+//  AppDelegate.h
 //  PROJECT
 //
 //  Created by PROJECT_OWNER on TODAYS_DATE.
@@ -8,7 +8,7 @@
 
 @import UIKit;
 
-@interface CPDAppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
