@@ -21,8 +21,11 @@ module Pod
             
             generate_languge_project
             replace_variables_in_files
-            replace_variables_in_sources_files
-            rename_sources_files
+            case pod_languge.downcase.to_sym
+                when :swift
+                swift_replace_variables_in_sources_files
+                swift_rename_sources_files
+            end
             clean_template_files
             customise_prefix
             rename_spec_files
@@ -77,7 +80,7 @@ module Pod
         end
         
         #替换Sources资源当中的变量内容
-        def replace_variables_in_sources_files
+        def swift_replace_variables_in_sources_files
             file_names = ['Sources/Util/Target.swift', 'Sources/Util/Util.swift', 'Sources/ViewModel/ViewModel.swift', 'Sources/Controller/ViewController.swift']
             file_names.each do |file_name|
                 text = File.read(file_name)
@@ -92,7 +95,7 @@ module Pod
         end
         
         #重命名Sources资源当中的文件名
-        def rename_sources_files
+        def swift_rename_sources_files
             File.rename("Sources/Util/Target.swift", "Sources/Util/" + @pod_name + "Target.swift")
             File.rename("Sources/Util/Util.swift", "Sources/Util/" + @pod_name + "Util.swift")
             File.rename("Sources/ViewModel/ViewModel.swift", "Sources/ViewModel/" + @pod_name + "ViewModel.swift")
